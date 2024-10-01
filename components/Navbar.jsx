@@ -10,18 +10,21 @@ export default function Navbar() {
         setToggleNav(prevState => !prevState);
     }
 
+    async function login() {    
+
+    }
    
 
     return (
         <header className={styles.header}>
-            <img src="public/images/coop-logo.png" alt="Co-op logo" />
-            <a href='/' className={styles.logo}></a>
+            <img src="images/co-op-logo.png" alt="Co-op logo" className={styles.logo}/>
+            {/* <a href='/' className={styles.logo}></a> */}
             <nav className={styles.navbar}>
-                <a href='/'>Dashboard</a>
-                <a href='/allproject'>Projects</a>
-                <a href='/createproject'>Create a project!</a>
-                <a href='/settings'>Settings</a>
-                {/* <a href='/login' onClick={logout}>Sign Out</a>  */}
+            <a href='/login' onClick={login}>Log in</a> 
+                <a href='/createproject'>What is this?</a>
+                <a href='/help'>Help</a>
+                <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a> 
+              
             </nav>
 
             <button className={styles.navBtn} onClick={toggleMenu}>
