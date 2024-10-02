@@ -1,0 +1,16 @@
+.departmentTitle{
+    text-align: center;
+}
+
+.allScriptBlocks ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-gap: 10px; /* Adjust spacing between the items */
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+

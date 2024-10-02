@@ -1,3 +1,38 @@
 .body{
     background-color: #FFF;
 }
+
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+.departments ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-gap: 10px; /* Adjust spacing between the items */
+    list-style-type: none;
+    padding: 0;
+}
+
+.departments ul li{
+    margin: 10px;
+    width: 300px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #e6e6e6;
+    background-image: linear-gradient(0deg, #e6e6e6 0%, #00a1cc 51%);  
+    border-radius: 0 18px 18px 18px;
+    border:2px solid #00a1cc;
+    text-align: center;
+    font-size: 30px;
+}
+
+.departments ul li a:any-link{
+    background-color: transparent;
+    text-decoration: none;
+    color: #FFF;  
+}    

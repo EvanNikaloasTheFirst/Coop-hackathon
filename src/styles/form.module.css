@@ -1,0 +1,48 @@
+.formGroup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    height: 300px;
+    margin: 0 auto;
+    width: 500px;
+    background-color: #f4f4f4;
+    position: relative;
+    top: 150px;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  
+  .inputBox {
+    color: #000;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    padding: 10px;
+    resize: none;
+  }
+  
+  .loginbtn {
+    display: flex;
+    margin: 0 auto;
+    background-color: pink;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .formContainer,
+  .loginTitle {
+    background-color: transparent;
+  }

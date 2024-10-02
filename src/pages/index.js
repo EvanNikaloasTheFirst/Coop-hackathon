@@ -1,21 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@components/Navbar";
+import { useState } from "react";
+import Link from 'next/link';
+export default function Home({allDepartments}) {
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-export default function Home() {
+  const [departments, setDepertments] = useState(['Food','Insurance','Bank','Legal Services','Florists'])
   return (
     <>
       <Head>
@@ -24,10 +14,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
+      <div>
           <Navbar/>
         <main className={styles.main}>
+
+          <div className={styles.content}>
+
+            <div className={styles.departments}>
+              
+              <ul>
+                {(
+                    departments.map((item) =>((
+                      <li>
+                        <Link href={`/department/${item}`}>
+                              {item}
+                        </Link>
+                      </li>
+                    ))
+                ))}
+              </ul>
+              </div>
+
+
+          </div>
+
+
         </main>
         <footer className={styles.footer}>
           
@@ -36,3 +47,40 @@ export default function Home() {
     </>
   );
 }
+
+// export async function  getServerSideProps(context) {
+//   const { id} = context.params;
+//   try{
+//       const response = await fetch(`https://getAllDepartments`, {
+
+//           method: 'GET',
+//           headers: {
+//               // Forward cookies from the request to the backend
+//               Cookie: context.req.headers.cookie || '', // Include cookies for authentication
+//           },
+//           credentials: 'include' // Ensure credentials (including cookies) are included in the request
+//       });
+//       if (!response.ok) {
+//           const text = await response.json(); // Read response as text
+//           // console.log(`Failed to fetch, status: ${response.status}, response: ${text}`);
+//           throw new Error(`Failed to fetch, status: ${response.status}`);
+//       }
+
+//       const allTickets = await response.json();
+//       return {
+//           props: {
+//               allTickets
+//           },
+//       };
+
+
+//   }catch(e){
+//       // console.log('Error fetching allTickets:' + e.message); // Log error message
+//       return {
+//           props: {
+//               allTickets: [], 
+//           },
+//       };
+//   }
+  
+// }

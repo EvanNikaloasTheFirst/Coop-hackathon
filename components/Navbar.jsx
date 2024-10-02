@@ -17,8 +17,10 @@ export default function Navbar() {
 
     return (
         <header className={styles.header}>
-            <img src="images/co-op-logo.png" alt="Co-op logo" className={styles.logo}/>
-            {/* <a href='/' className={styles.logo}></a> */}
+        <a href="/"  className={styles.logo} >
+        <img src="/images/co-op-logo.png" alt="Co-op logo" 
+        className={styles.logo}/>
+        </a>
             <nav className={styles.navbar}>
             <a href='/login' onClick={login}>Log in</a> 
                 <a href='/createproject'>What is this?</a>
