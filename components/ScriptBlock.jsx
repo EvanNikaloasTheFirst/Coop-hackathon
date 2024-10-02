@@ -4,7 +4,7 @@ export default function ScriptBlock(){
 
     return(
     <div className={styles.scriptComponent}>
-<ul className={styles.scriptComponentItems}>
+    <ul className={styles.scriptComponentItems}>
     <li>
         ID:#12345678
     </li>
@@ -13,7 +13,7 @@ export default function ScriptBlock(){
         Description: Here will be the Description
     </li>
 
-    {/* <li>
+    <li>
     Submitted by: #1234566
     </li>
 
@@ -23,7 +23,7 @@ export default function ScriptBlock(){
 
     <li>
         <button className={styles.accessBtn}>Access Script</button>
-    </li> */}
+    </li>
 </ul>
 
 

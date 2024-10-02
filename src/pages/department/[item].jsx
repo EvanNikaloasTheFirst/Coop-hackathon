@@ -3,6 +3,7 @@ import SearchBar from "@components/Searchbar";
 import { useRouter } from 'next/router';
 import styles from "@/styles/department.module.css";
 import home from "@/styles/Home.module.css";
+import components from "@/styles/components.module.css";
 
 import ScriptBlock from "@components/ScriptBlock";
 
@@ -19,7 +20,14 @@ export default function departmentPage(){
             <Navbar/>
             <h1 className={styles.departmentTitle}>{item}</h1>
             <SearchBar/>
+            
+                <button className={components.requestBtn}>
+                    Request
+                    </button>
+
            <div className={home.content}>
+
+           
            <div className={styles.allScriptBlocks}>
                 <ul>
                     <li>
