@@ -1,11 +1,19 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@components/Navbar";
-import { useState } from "react";
-import Link from 'next/link';
-export default function Home({allDepartments}) {
 
-  const [departments, setDepertments] = useState(['Food','Insurance','Bank','Legal Services','Florists'])
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
+
+export default function Home() {
   return (
     <>
       <Head>
@@ -17,28 +25,6 @@ export default function Home({allDepartments}) {
       <div>
           <Navbar/>
         <main className={styles.main}>
-
-          <div className={styles.content}>
-
-            <div className={styles.departments}>
-              
-              <ul>
-                {(
-                    departments.map((item) =>((
-                      <li>
-                        <Link href={`/department/${item}`}>
-                              {item}
-                        </Link>
-                      </li>
-                    ))
-                ))}
-              </ul>
-              </div>
-
-
-          </div>
-
-
         </main>
         <footer className={styles.footer}>
           
