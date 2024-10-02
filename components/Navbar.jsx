@@ -25,13 +25,6 @@ export default function Navbar() {
             <Link href="/" className={styles.logo}>
                 <img src="/images/co-op-logo.png" alt="Co-op logo" className={styles.logo}/>
             </Link>
-            {/* <nav className={styles.navbar}>
-                <Link href='/login' onClick={login}>Log in</Link>
-                <Link href='/createproject'>What is this?</Link>
-                <Link href='/help'>Help</Link>
-                <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a>
-            </nav> */}
-
             <div className={styles.dropdown}>
                 <button className={styles.dropdownBtn} onClick={toggleDropdown}>
                     Menu

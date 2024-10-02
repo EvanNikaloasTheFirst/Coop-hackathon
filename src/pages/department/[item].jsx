@@ -25,9 +25,11 @@ export default function departmentPage(){
            
            
            <div className={styles.allScriptBlocks}>
+           <a href="/request">
            <button className={components.requestBtn}>
                     Request
                     </button>
+           </a>
                 <ul>
                     <li>
                         <ScriptBlock/>
