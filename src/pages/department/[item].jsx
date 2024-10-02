@@ -6,6 +6,7 @@ import home from "@/styles/Home.module.css";
 import components from "@/styles/components.module.css";
 
 import ScriptBlock from "@components/ScriptBlock";
+import Footer from "@components/Footer";
 
 export default function departmentPage(){
 
@@ -20,15 +21,13 @@ export default function departmentPage(){
             <Navbar/>
             <h1 className={styles.departmentTitle}>{item}</h1>
             <SearchBar/>
-            
-                <button className={components.requestBtn}>
-                    Request
-                    </button>
-
            <div className={home.content}>
-
+           
            
            <div className={styles.allScriptBlocks}>
+           <button className={components.requestBtn}>
+                    Request
+                    </button>
                 <ul>
                     <li>
                         <ScriptBlock/>
@@ -45,6 +44,7 @@ export default function departmentPage(){
             </div>
 
            </div>
+           <Footer/>
         </div>
     )
 }
