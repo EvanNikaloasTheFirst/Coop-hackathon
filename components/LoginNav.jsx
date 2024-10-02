@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from "@/styles/Navbar.module.css";
 import { useRouter } from 'next/router';
 
-export default function Navbar() {
+export default function LoginNav() {
     const router = useRouter();
     const [toogleNav, setToggleNav] = useState(false);
 
@@ -22,8 +22,7 @@ export default function Navbar() {
         className={styles.logo}/>
         </a>
             <nav className={styles.navbar}>
-                <a href="/dashboard">Dashboard</a>
-                <a href="/summary">Your requests</a>
+            <a href='/login' onClick={login}>Log in</a> 
                 <a href='/createproject'>What is this?</a>
                 <a href='/help'>Help</a>
                 <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a> 
@@ -36,14 +35,9 @@ export default function Navbar() {
 
             {/* Conditionally render menu based on toogleNav state */}
             <div className={styles.Links} style={{ display: toogleNav ? 'flex' : 'none' }}>
-         
-            <a href="/dashboard">Dashboard</a>
-            <a href="/">Home</a>
-                <a href="/summary">Your requests</a>
-                <a href='/createproject'>What is this?</a>
+            <a href='/createproject'>What is this?</a>
                 <a href='/help'>Help</a>
                 <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a> 
-              
             </div>
         </header>
     );

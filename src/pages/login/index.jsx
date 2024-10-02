@@ -1,19 +1,20 @@
-import Navbar from "@components/Navbar";
+import LoginNav from "@components/LoginNav";
 import styles from "@/styles/form.module.css";
 import { useState } from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Footer from "@components/Footer";
 
 export default function login() {
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
 
-  async function handleSubmit() {
+  async function handleSubmit(e) {
+    e.preventDefault(); // Prevent form's default behavior
     try {
       const body = { username: userName, password: password };
-        router.push("/");
-      
+      // Assuming login logic is successful, redirect the user
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
@@ -21,7 +22,7 @@ export default function login() {
 
   return (
     <div>
-      <Navbar />
+      <LoginNav />
       <main>
         <div className={styles.form}>
           <form onSubmit={handleSubmit} className={styles.formContainer}>
@@ -40,7 +41,7 @@ export default function login() {
               />
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="password">password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
@@ -52,7 +53,7 @@ export default function login() {
               />
             </div>
             <button type="submit" className={styles.loginbtn}>
-              Login123
+              Login
             </button>
           </form>
         </div>
