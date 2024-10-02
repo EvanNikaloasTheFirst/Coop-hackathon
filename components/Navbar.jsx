@@ -25,12 +25,12 @@ export default function Navbar() {
             <Link href="/" className={styles.logo}>
                 <img src="/images/co-op-logo.png" alt="Co-op logo" className={styles.logo}/>
             </Link>
-            <nav className={styles.navbar}>
+            {/* <nav className={styles.navbar}>
                 <Link href='/login' onClick={login}>Log in</Link>
                 <Link href='/createproject'>What is this?</Link>
                 <Link href='/help'>Help</Link>
                 <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a>
-            </nav>
+            </nav> */}
 
             <div className={styles.dropdown}>
                 <button className={styles.dropdownBtn} onClick={toggleDropdown}>
@@ -38,10 +38,11 @@ export default function Navbar() {
                 </button>
                 {dropdownOpen && (
                     <div className={styles.dropdownContent}>
-                        <Link href='/dashboard'>Dashboard</Link>
-                        <Link href='/allproject'>Projects</Link>
-                        <Link href='/createproject'>Create a project!</Link>
-                        <Link href='/settings'>Settings</Link>
+                <Link href='/'>Home</Link>
+                <Link href='/dashboard'>Dashboard</Link>
+                <Link href='/what-is-this'>What is this</Link>
+                <Link href='/help'>Help</Link>
+                <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a>
                     </div>
                 )}
             </div>
