@@ -128,11 +128,12 @@
         background-color: #FFF;
     }
 
-    .Links a {
-        padding-bottom: 25px;
-        background-color: #FFF;
-        color: green;
-        text-decoration: none;
-        padding-top: 25px;
-    }
+.Links a{
+    padding-bottom: 25px;
+    background-color: #FFF;
+    color: green;
+    text-decoration: none;
+    padding-top: 25px;
+}
+
 }

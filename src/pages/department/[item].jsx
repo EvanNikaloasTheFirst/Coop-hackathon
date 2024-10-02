@@ -20,11 +20,11 @@ export default function departmentPage(){
             <Navbar/>
             <h1 className={styles.departmentTitle}>{item}</h1>
             <SearchBar/>
-            <div className={components.requestBtnBox}>
+            
                 <button className={components.requestBtn}>
                     Request
                     </button>
-            </div>
+
            <div className={home.content}>
 
            

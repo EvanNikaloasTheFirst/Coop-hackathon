@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div>
       <footer className={styles.footerBlock}>
-        <p>Footer goes here</p>
+        <p>Footer goes here!!!</p>
       </footer>
     </div>
   );

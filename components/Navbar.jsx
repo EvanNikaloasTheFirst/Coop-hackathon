@@ -47,7 +47,7 @@ export default function Navbar() {
             </div>
 
             <button className={styles.navBtn} onClick={toggleMenu}>
-                <img src="/icons/menu.png" alt="Menu" className={styles.imgNav} />
+                <img src="/images/menu.png" alt="Menu" className={styles.imgNav} />
             </button>
 
             {/* Conditionally render menu based on toogleNav state */}

@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import Navbar from "@components/Navbar";
 import { useState } from "react";
 import Link from 'next/link';
+import Footer from "@components/Footer";
 export default function Home({allDepartments}) {
 
   const [departments, setDepertments] = useState(['Food','Insurance','Bank','Legal Services','Florists'])
@@ -40,9 +41,7 @@ export default function Home({allDepartments}) {
 
 
         </main>
-        <footer className={styles.footer}>
-          
-        </footer>
+        <Footer/>
       </div>
     </>
   );
