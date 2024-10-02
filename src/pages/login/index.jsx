@@ -12,9 +12,8 @@ export default function login() {
   async function handleSubmit() {
     try {
       const body = { username: userName, password: password };
-      if (1 + 1 == 2) {
-        router.push("/dashboard");
-      }
+        router.push("/");
+      
     } catch (error) {
       console.log(error);
     }
@@ -53,7 +52,7 @@ export default function login() {
               />
             </div>
             <button type="submit" className={styles.loginbtn}>
-              Login
+              Login123
             </button>
           </form>
         </div>

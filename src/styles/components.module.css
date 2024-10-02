@@ -88,21 +88,20 @@
 
 /* Request button */
 
-.requestBtnBox{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    align-items: center;
-}
+
 .requestBtn{
-    display: flex;
-    justify-content: left;
+    position: relative;
+    left: 0;
+    justify-content: center;
     align-self: center;
-    width: 100px;
-    background-color: #00A1CC;
     text-align: center;
-    color: #FFF;
+    width: 100px;
+    text-align: center;
     margin-left: 10px;
+    border: 1px solid #000 ;
+    background-color: #00A1CC;
+    border-radius: 4px;
+    color: #FFF;
 }
 
 

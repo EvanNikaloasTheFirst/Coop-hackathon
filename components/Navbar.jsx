@@ -30,16 +30,14 @@ export default function Navbar() {
             </nav>
 
             <button className={styles.navBtn} onClick={toggleMenu}>
-                <img src="/icons/menu.png" alt="Menu" className={styles.imgNav} />
+                <img src="/images/menu.png" alt="Menu" className={styles.imgNav} />
             </button>
 
             {/* Conditionally render menu based on toogleNav state */}
             <div className={styles.Links} style={{ display: toogleNav ? 'flex' : 'none' }}>
-                <a href='/'>Dashboard</a>
-                <a href='/allproject'>Projects</a>
-                <a href='/createproject'>Create a project!</a>
-                <a href='/settings'>Settings</a>
-                {/* <a href='/login' onClick={logout}>Sign Out</a>  */}
+            <a href='/createproject'>What is this?</a>
+                <a href='/help'>Help</a>
+                <a href='https://www.co-operative.coop/' onClick={login}>Co-op Home</a> 
             </div>
         </header>
     );
