@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+  }
+  
+  .columnWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .column {
+    width: 100%;
+    height: 70vh; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+  }
